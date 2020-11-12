@@ -1,0 +1,248 @@
+/*HOME*/
+
+h1 {
+    font-family: Verdana, Arial, sans-serif;
+    color: purple;
+    font-size: 50px;
+}
+
+#chamada {
+    font-family: Arial, Impact, Bold;
+    color: black;
+    font-size: 30px;
+}
+
+#frase {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 3;
+    color: purple;
+}
+
+
+/* FIM DA HOME */
+
+p {
+    font-size: 130%;
+}
+
+h2 {
+    font-family: Verdana, Arial, sans-serif;
+    color: purple;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: Arial, Times, serif;
+    color: rgb(153, 92, 153);
+}
+
+header {
+    background-color: rgb(230, 80, 180);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 290px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border: 2px solid black;
+    text-align: center;
+    width: 130px;
+}
+
+
+/*PAGINA PRODUTO*/
+
+.categoria {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(218, 33, 141);
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+#bonecaazul1 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(219, 155, 15);
+}
+
+#bonecaamarela1 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(52, 199, 15);
+}
+
+#bonecaazul2 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(79, 15, 199);
+}
+
+#bonecaamarela2 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(126, 10, 10);
+}
+
+#bonecabege {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(230, 80, 180);
+}
+
+#bonecaamarela3 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(177, 216, 231);
+}
+
+#bonecarosa1 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(247, 141, 2);
+}
+
+#bonecarosa2 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(250, 7, 7);
+}
+
+#bonecaroxa1 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(83, 10, 126);
+}
+
+#bonecaroxa2 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(46, 255, 81);
+}
+
+#bonecarosa3 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(165, 25, 165);
+}
+
+#bonecaamarela4 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: rgb(19, 93, 204);
+}
+
+strike {
+    color: red;
+}
+
+.pagproduto {
+    display: flex;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.produtos img {
+    width: 140px;
+    margin: 0 auto;
+    height: 140px;
+}
+
+.bonecast {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* FIM PAGINA PRODUTO*/
+
+
+/*PAGINA CONTATO*/
+
+.contato {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 4;
+}
+
+.subcontato {
+    display: inline-block;
+}
+
+.form {
+    color: rgb(230, 80, 180);
+    text-align: center;
+}
+
+.form input {
+    width: 400px;
+}
+
+#button {
+    width: 90px;
+    color: purple;
+}
+
+#msg {
+    display: block;
+    color: rgb(230, 80, 180);
+}
+
+textarea {
+    height: 200px;
+    width: 500px;
+    align-items: center;
+}
+
+
+/*FIM PAGINA CONTATO*/
+
+
+/* PAGINA LOJA*/
+
+.locais {
+    justify-content: space-between;
+    display: flex;
+}
+
+.enderecos {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(255, 172, 204);
+    border-radius: 290px;
+    padding: 30px;
+    border: 2px solid black;
+    text-align: center;
+    width: 220px;
+    height: 270px;
+}
+
+
+/*FIM PAGINA LOJA*/
+
+
+/* FOOTER*/
+
+#assinatura {
+    font-family: 'Times New Roman', Times, serif;
+    color: purple;
+    text-align: center;
+}
+
+h4 {
+    font-size: 40;
+    font-family: Arial, Verdana;
+    color: purple;
+    text-align: center;
+}
