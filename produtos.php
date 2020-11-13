@@ -69,18 +69,19 @@ include('menu.html');
             <?php
 
 
-                $sql = "select * from produtos";
+                $sql = "SELECT * FROM produtos";
                 $result = $conn->query($sql);
 
                 if($result->num_rows>0){
                     while($rows = $result->fetch_assoc()){
+                        
 
                         
                       
                       
            ?>
                   <div class="produtos"  style="display:block" id="<?php echo $rows["nome"];?>" >
-                    <img src="<?php echo $rows["imagem"]; ?>" onclick="destaque(this)">
+                    <img src="./<?php echo $rows["imagem"]; ?> " onclick="destaque(this)">
                     <br>
                     <strong id="bonecaazul1"><?php echo $rows["descricao"];?></strong>
                     <hr>

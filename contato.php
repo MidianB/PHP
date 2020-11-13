@@ -11,17 +11,38 @@ if (!$conn)
      die("A conexão ao BD falhou" . mysqli_connect_error());
 
  }
- 
-     if (isset ($_POST['nome']) && isset ($_POST['telefone']))
-{
-    $nome = $_POST['nome'];
-    $telefone = $_POST['telefone'];
+ /*Recebe os dados do formulário após a condição (é apenas uma condição de verificação) */
+/*
+     if (isset ($_POST['nome_input']) && isset ($_POST['telefone_input']) && isset ($_POST['endereco_input']) && isset ($_POST['quantidade_input']) && isset ($_POST['nomeProduto_input']))
+{*/
+   
+    $nome = $_POST['nome_input'];
+    $telefone = $_POST['telefone_input'];
+    $quantidade = $_POST['quantidade_input'];
+    $produto = $_POST['nomeProduto_input'];
+    $endereco = $_POST['endereco_input'];
 
-    echo $nome.$telefone;
+   
+  
 
-    $sql = "insert into pedidos (nome,telefone) values ('$nome','$telefone')";
-    $result = $conn -> query($sql);
-}
+    /*INSERE os dados no BD, linguagem SQL(BD)*/
+
+    $sql = "insert into pedidos (nomeCliente,telefone,nomeProduto,quantidade,endereco) values ('$nome','$telefone','$produto','$quantidade','$endereco')";
+    $result = mysqli_query($conn, $sql);
+   
+
+    
+   
+    if ($result){
+        echo "<script> alert( 'cadastrado com sucesso') </script>";
+
+    }else{
+        echo "erro";
+        
+       
+
+    }
+
  ?>
 
 
@@ -85,35 +106,35 @@ include('menu.html');
         <br>
 
 
-        <form class="form"  method="post" action = "">
+        <form class="form"  method="post" >
 
         <label id="msg"><strong>Faça seu pedido:</strong></label>
             <br>
             <label form="nome"><strong>Nome:</strong></label>
-            <input name ="nome" type="text"  placeholder="Digite seu nome ">
+            <input name ="nome_input" type="text"  placeholder="Digite seu nome ">
             <br>
             <br>
             <label form="telefone"><strong>Telefone:</strong></label>
-            <input type="text" name ="telefone"placeholder="Digite seu telefone ">
+            <input type="text" name ="telefone_input"placeholder="Digite seu telefone ">
             <br>
             <br>
             <label form="produto"><strong>Produto:</strong></label>
-            <input type="text" name ="nomeProduto"placeholder="Digite o produto ">
+            <input type="text" name ="nomeProduto_input"placeholder="Digite o produto ">
             <br>
             <br>
             <label form="quantidade"><strong>Quantidade:</strong></label>
-            <input type="text" name ="quantidade"placeholder="Digite a quantidade ">
+            <input type="text" name ="quantidade_input"placeholder="Digite a quantidade ">
             <br>
             <br>
             <label form="endereço"><strong>Endereço:</strong></label>
-            <input type="text"  name ="endereco" placeholder="Digite seu endereço">
+            <input type="text"  name ="endereco_input" placeholder="Digite seu endereço">
             <br>
             <br>
 
 
            
 
-        <input id="button" type="submit" name ="submit" onclick="alert('Obrigada pelo pedido ! Enviaremos em breve.')" value="Enviar" style="width:70px">
+        <input id="button" type="submit" name ="submit"  value="Enviar" style="width:70px">
 
         
 
@@ -124,17 +145,20 @@ include('menu.html');
 
         <?php
 
-
+/*faz a conexão com o BD*/
 $sql = "select * from pedidos";
 $result = $conn->query($sql);
 
 if($result->num_rows>0){
     while($rows = $result->fetch_assoc()){
-echo "Nome:", $row['nome'],"<br>";
-echo "Telefone:", $row['telefone'],"<br>";
-echo "Quantidade:", $row['quantidade'],"<br>";
-echo "Endereço:", $row['endereco'],"<br>";
-echo "Produto:", $row['nomeProduto'],"<br>";
+
+       
+        
+echo "Nome:", $rows['nomeCliente'],"<br>";
+echo "Telefone:", $rows['telefone'],"<br>";
+echo "Quantidade:", $rows['quantidade'],"<br>";
+echo "Endereço:", $rows['endereco'],"<br>";
+echo "Produto:", $rows['nomeProduto'],"<br>";
 echo "<hr>";
         
 }
