@@ -76,7 +76,8 @@ include('menu.html');
                     while($rows = $result->fetch_assoc()){
                         
 
-                        
+                    }
+            }
                       
                       
            ?>
